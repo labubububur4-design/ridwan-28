@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Es Teh segar — Teman Setia Harimu</title>
+  <meta name="description" content="Segarnya Es Teh, Teman Setia Harimu. Varian original & fruity, gula asli, tanpa pengawet. Pesan sekarang!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Bubbles / Ice cubes background -->
+  <div id="bubble-layer" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-flex">
+      <a href="#" class="logo" aria-label="Beranda">
+        <img src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/ice-tea.svg" alt="" width="36" height="36" />
+        <span>EsTeh<span class="accent">𝖜𝖆𝖜</span></span>
+      </a>
+
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">Tentang</a>
+        <a href="#locations">Lokasi</a>
+        <a href="#testimonials">Testimoni</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+
+      <div class="actions">
+        <button id="themeToggle" class="btn ghost" aria-label="Toggle tema">🌙</button>
+        <a href="#order" class="btn primary">Pesan Sekarang</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / HOMEPAGE -->
+  <section id="home" class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Segarnya Es Teh, <span class="accent">Teman Setia Harimu</span></h1>
+        <p>Racikan teh pilihan dengan gula asli dan tanpa pengawet—nikmat dingin seketika, cocok untuk semua momen.</p>
+        <div class="hero-cta">
+          <a href="#order" class="btn primary">Pesan Sekarang</a>
+          <a href="#menu" class="btn">Lihat Menu</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img class="teh-anim" src="https://images.unsplash.com/photo-1541976076758-347942db1970?q=80&w=1200&auto=format&fit=crop" alt="Segelas es teh menyegarkan" />
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Menu</h2>
+        <p>Pilih favoritmu: <strong>Original</strong> atau <strong>Fruity</strong>.</p>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Filter menu">
+        <button class="chip active" data-filter="all" role="tab" aria-selected="true">Semua</button>
+        <button class="chip" data-filter="original" role="tab" aria-selected="false">Original</button>
+        <button class="chip" data-filter="fruity" role="tab" aria-selected="false">Fruity</button>
+      </div>
+
+      <div class="grid cards" id="menuGrid" aria-live="polite">
+        <!-- Original -->
+        <article class="card menu-item" data-category="original">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1556679343-c7306c76d6d7?q=80&w=1200&auto=format&fit=crop" alt="Es Teh Manis Original" />
+          </div>
+          <div class="card-body">
+            <h3>Teh Manis Original</h3>
+            <p>Teh hitam premium, diracik dengan gula tebu asli. Segar & klasik.</p>
+            <div class="price">Rp5.000</div>
+          </div>
+          <div class="card-actions">
+            <button class="btn small add-to-order" data-name="Teh Manis Original" data-price="10000">Tambah</button>
+          </div>
+        </article>
+
+        <!-- Fruity -->
+        <article class="card menu-item" data-category="fruity">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1542326237-94b1c5a538d5?q=80&w=1200&auto=format&fit=crop" alt="Teh Lemon" />
+          </div>
+          <div class="card-body">
+            <h3>Teh Lemon</h3>
+            <p>Perpaduan teh segar dengan perasan lemon asli—manis-asam menyegarkan.</p>
+            <div class="price">Rp5.000</div>
+          </div>
+          <div class="card-actions">
+            <button class="btn small add-to-order" data-name="Teh Lemon" data-price="14000">Tambah</button>
+          </div>
+        </article>
+
+        <!-- Tambahan contoh fruity -->
+        <article class="card menu-item" data-category="fruity">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1598514982650-73057f8b0b42?q=80&w=1200&auto=format&fit=crop" alt="Teh Peach" />
+          </div>
+          <div class="card-body">
+            <h3>Teh Peach</h3>
+            <p>Hint peach alami yang harum dan lembut. Favorit siang bolong.</p>
+            <div class="price">Rp5.000</div>
+          </div>
+          <div class="card-actions">
+            <button class="btn small add-to-order" data-name="Teh Peach" data-price="15000">Tambah</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section alt">
+    <div class="container about-grid">
+      <div>
+        <h2>Tentang Kami</h2>
+        <p>EsTehKita lahirdari tadi dengan misi sederhana: menghadirkan es teh yang benar-benar <em>jujur kayanya</em>—dari daun teh pilihan, gula asli, dan tanpa pengawet.</p>
+        <ul class="checks">
+          <li>Daun teh pilihan, diseduh harian</li>
+          <li>Gula tebu asli — no sirup sintetis</li>
+          <li>Tanpa pengawet & tanpa pewarna buatan</li>
+          <li>Rasa konsisten berkat standar seduh 4-6 menit</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>Nilai Jual Unik</h3>
+        <p>Kami fokus pada rasa yang bersih, manis seimbang, dan aroma teh yang utuh. Semua dibuat segar saat dipesan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOKASI & PEMESANAN -->
+  <section id="locations" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Lokasi & Pemesanan</h2>
+        <p>Kunjungi outlet kami atau pesan online.</p>
+      </div>
+
+      <div class="locations-grid">
+        <div class="map-wrap">
+          <!-- Ganti src berikut dengan embed Google Maps outletmu -->
+          <iframe title="Lokasi Outlet EsTehKita" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.108167158163!2d106.819!3d-6.246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1f3c8d2b7a7%3A0x5b9d0!2sJakarta!5e0!3m2!1sid!2sid!4v1680000000000">
+          </iframe>
+        </div>
+
+        <div class="order-actions">
+          <h3>Order Kilat</h3>
+          <p>WhatsApp kami untuk pesanan cepat:</p>
+          <a class="btn wa" target="_blank" rel="noopener"
+             href="https://wa.me/6281234567890?text=Halo%20EsTehKita%2C%20saya%20mau%20pesan%20es%20teh.">Chat WhatsApp</a>
+
+          <div class="divider"><span>atau</span></div>
+
+          <!-- ORDER FORM (opsional) -->
+          <form id="order" class="order-form" novalidate>
+            <h4>Order Form</h4>
+            <label>Nama
+              <input type="text" name="nama" required placeholder="Nama lengkap" />
+            </label>
+            <label>No. WhatsApp
+              <input type="tel" name="wa" required placeholder="08xxxxxxxxxx" />
+            </label>
+
+            <label>Pilihan Menu
+              <select name="menu" required>
+                <option value="">-- pilih --</option>
+                <option value="Teh Manis Original|5000">Teh Manis Original — 5.000</option>
+                <option value="Teh Lemon|5000">Teh Lemon — 5.000</option>
+                <option value="Teh Peach|5000">Teh Peach — 5.000</option>
+              </select>
+            </label>
+
+            <div class="row">
+              <label>Jumlah
+                <input type="number" name="qty" min="1" value="1" required />
+              </label>
+              <label>Es / Gula
+                <select name="note">
+                  <option>Normal</option>
+                  <option>Less Ice</option>
+                  <option>No Ice</option>
+                  <option>Less Sugar</option>
+                </select>
+              </label>
+            </div>
+
+            <label>Alamat (opsional)
+              <textarea name="alamat" rows="3" placeholder="Isi jika perlu diantar"></textarea>
+            </label>
+
+            <div class="order-summary" aria-live="polite">
+              <span>Total:</span> <strong id="orderTotal">Rp0</strong>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Kirim Order via WA</button>
+            </div>
+            <p class="form-help">Dengan menekan tombol di atas, pesananmu akan diarahkan ke WhatsApp dengan format otomatis.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Testimoni</h2>
+        <p>Kata mereka tentang EsTehKita.</p>
+      </div>
+
+      <div class="grid testimonials">
+        <figure class="t-card">
+          <blockquote>“Manisnya pas, aromanya dapet. Beneran nagih tiap siang!”</blockquote>
+          <figcaption>
+            <span class="stars" data-rating="5" aria-label="Rating 5 dari 5"></span>
+            <span class="who">agung — smk yai</span>
+          </figcaption>
+        </figure>
+
+        <figure class="t-card">
+          <blockquote>“Teh lemonnya seger banget, asamnya nggak berlebihan.”</blockquote>
+          <figcaption>
+            <span class="stars" data-rating="4.5" aria-label="Rating 4.5 dari 5"></span>
+            <span class="who">daniel — smk yai</span>
+          </figcaption>
+        </figure>
+
+        <figure class="t-card">
+          <blockquote>“Suka karena tanpa pengawet. Anak-anak juga doyan.”</blockquote>
+          <figcaption>
+            <span class="stars" data-rating="4" aria-label="Rating 4 dari 5"></span>
+            <span class="who">rojak — kang parkir </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & SOCIAL -->
+  <section id="contact" class="section">
+    <div class="container contact-grid">
+      <div>
+        <h2>Kontak & Sosial Media</h2>
+        <p>Ingin kolaborasi, franchise, atau sekadar sapa kami?</p>
+        <div class="socials">
+          <a target="_blank" rel="noopener" href="https://instagram.com/" aria-label="Instagram">Instagram</a>
+          <a target="_blank" rel="noopener" href="https://tiktok.com/" aria-label="TikTok">TikTok</a>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <label>Nama
+            <input type="text" name="nama" required />
+          </label>
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+          <label>Pesan
+            <textarea name="pesan" rows="4" required></textarea>
+          </label>
+          <button class="btn" type="submit">Kirim</button>
+          <p class="small muted" id="contactStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="contact-card">
+        <h3>Jam Operasional</h3>
+        <ul>
+          <li>Senin–Jumat: 10.00–21.00</li>
+          <li>Sabtu–Minggu: 10.00–22.00</li>
+        </ul>
+        <h3>Hubungi</h3>
+        <ul>
+          <li>WhatsApp: 082gelas-esteh</li>
+          <li>Email: estehr28@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container foot-flex">
+      <p>© <span id="year"></span> EsTeh r28. All rights reserved.</p>
+      <a href="#home" class="backtop" aria-label="Kembali ke atas">↑ Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
